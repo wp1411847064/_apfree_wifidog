@@ -995,6 +995,8 @@ fw3_ipt_close(struct fw3_ipt_handle *h)
 
 	free(h);
     h = NULL;
+
+    xtables_fini();//Add it or fail with next table
 }
 
 int
